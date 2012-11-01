@@ -22,6 +22,17 @@
 // -------------------------
 @blue:                  #049cdb;
 @blueDark:              #0064cd;
+
+@mBlue: #54b1ea;
+@mBlueDarken: #4c9dd7;
+@mTextOnBlue: white;
+@mTopGray: #b9c1c6;
+@mYellowButton: #d9ec6d;
+@mYellowButtonText: #566225;
+@mDarkBlueBgColor: #368ac0;
+@mBlueHaloBg: #60a5d6;
+@m-header-on-gray: #28707a;
+
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
@@ -49,6 +60,7 @@
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
+@smallFontSize:         10px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
@@ -79,7 +91,7 @@
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
 @tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
+@tableBackgroundHover:              lighten(#f5fad8, 5%); // for hover
 @tableBorder:                       #ddd; // table and cell border
 
 // Buttons
@@ -88,8 +100,8 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         #bbb;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackground:              #ffffbb;
+@btnPrimaryBackgroundHighlight:     #e1e17f;
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
@@ -299,3 +311,12 @@
 // 768px-979px
 @fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
 @fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
+
+
+// Images
+@mImagesDir: "/images";
+@mFontsDir: "/fonts";
+@mGrayTopBg: url("@{mImagesDir}/gray-top-bg.gif");
+@mGrayBg: url('@{mImagesDir}/gray-bg.gif');
+@mBlueBg: url('@{mImagesDir}/blue-bg.gif');
+@mDarkBlueBg: url('@{mImagesDir}/blue-darken-bg.gif');
