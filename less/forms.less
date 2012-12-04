@@ -87,6 +87,11 @@ input[type="color"],
   color: @gray;
   .border-radius(@inputBorderRadius);
   vertical-align: middle;
+
+  .on-blue & {
+    .border-radius(10px);
+    color: @mTextOnBlue;
+  }
 }
 
 // Reset appearance properties for textual inputs and textarea
@@ -128,6 +133,23 @@ input[type="color"],
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
     .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
+  }
+
+  .on-blue & {
+    border: 0;
+    @shadow: 0px 1px 0 rgba(255,255,255,0.4), inset 0 0 1px 1px rgba(0,0,0,0.2);
+    .box-shadow(@shadow);
+    #gradient > .vertical-six-colors(#32688f, #3e7eae, 1%, #458dc1, 2%, #4a96cd, 4%, #4d9bd3, 5%, #70aedb);
+  }
+
+  .on-blue &:-moz-placeholder {
+    color: lighten(#b2d1e7, 20%);
+    text-shadow: 0 1px 0 #32688f;
+  }
+
+  .on-blue &::-webkit-input-placeholder {
+    color: lighten(#b2d1e7, 20%);
+    text-shadow: 0 1px 0 #32688f;
   }
 }
 

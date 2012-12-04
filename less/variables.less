@@ -316,9 +316,14 @@
 
 
 // Images
-@mImagesDir: "/images";
-@mFontsDir: "/fonts";
+@mImagesDir: "/static/images";
+@mFontsDir: "/static/fonts";
 @mGrayTopBg: url("@{mImagesDir}/gray-top-bg.gif");
 @mGrayBg: url('@{mImagesDir}/gray-bg.gif');
 @mBlueBg: url('@{mImagesDir}/blue-bg.gif');
 @mDarkBlueBg: url('@{mImagesDir}/blue-darken-bg.gif');
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+  ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+  ~"only screen and (-o-min-device-pixel-ratio: '3/2')",
+  ~"only screen and (min-device-pixel-ratio: 1.5)";
