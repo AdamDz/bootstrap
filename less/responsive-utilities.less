@@ -13,18 +13,23 @@
 // Visibility utilities
 
 // For desktops
+.visible-phone-portrait { display: none !important; }
 .visible-phone     { display: none !important; }
 .visible-tablet    { display: none !important; }
+
+.hidden-phone-portrait { }
 .hidden-phone      { }
 .hidden-tablet     { }
 .hidden-desktop    { display: none !important; }
+
 .visible-desktop   { display: inherit !important; }
 
 // Tablets & small desktops only
 @media (min-width: 768px) and (max-width: 979px) {
   // Hide everything else
   .hidden-desktop    { display: inherit !important; }
-  .visible-desktop   { display: none !important ; }
+  .visible-desktop   { display: none !important; }
+
   // Show
   .visible-tablet    { display: inherit !important; }
   // Hide
@@ -36,8 +41,20 @@
   // Hide everything else
   .hidden-desktop    { display: inherit !important; }
   .visible-desktop   { display: none !important; }
+
   // Show
   .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
   // Hide
   .hidden-phone      { display: none !important; }
+}
+
+@media @phonePortrait {
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+
+  // Show
+  .visible-phone-portrait     { display: inherit !important; } // Use inherit to restore previous behavior
+  // Hide
+  .hidden-phone-portrait      { display: none !important; }
 }

@@ -46,7 +46,7 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @grayDark;
+@textColor:             @mTextOnBlue;
 
 
 // Links
@@ -57,20 +57,20 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@sansFontFamily:        "proxima_nova_rgregular", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       "FrutigerLTStd-BoldCn", Verdana, Arial, sans-serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
-@smallFontSize:         10px;
+@baseFontSize:          16px;
+@smallFontSize:         14px;
 @baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        20px;
+@baseRelLineHeight:     1.5;
+@baseLineHeight:        @baseFontSize*@baseRelLineHeight;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontFamily:    @serifFontFamily; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
-
 
 // Component sizing
 // -------------------------
@@ -209,14 +209,14 @@
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
+@navbarInverseBackground:                #222222;
+@navbarInverseBackgroundHighlight:       #333333;
 @navbarInverseBorder:                    #252525;
 
 @navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
+@navbarInverseLinkColor:                 lighten(#ffffbb, 10%);
 @navbarInverseLinkColorHover:            @white;
-@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseLinkColorActive:           @white;
 @navbarInverseLinkBackgroundHover:       transparent;
 @navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
 
@@ -327,3 +327,10 @@
   ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
   ~"only screen and (-o-min-device-pixel-ratio: '3/2')",
   ~"only screen and (min-device-pixel-ratio: 1.5)";
+
+@phonePortrait: ~"(max-width: 360px)";
+@phone: ~"(max-width: 767px)";
+@tablet: ~"(min-width: 768px) and (max-width: 979px)";
+@tabletAndLarger: ~"(min-width: 768px)";
+@desktop: ~"(min-width: 980px) and (max-width: 1199px)";
+@largest: ~"(min-width: 1200px)";
